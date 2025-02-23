@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренировка на турнике</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .exercise {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .rating {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Тренировка на турнике</h1>
+    
+    <div class="exercise">
+        <h2>Техника выполнения подтягиваний</h2>
+        <p>Держите спину ровно, подтягивайтесь без рывков, опускайтесь медленно.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Chin-Up-1.jpg" alt="Подтягивание" width="100%">
+    </div>
+
+    <div class="exercise">
+        <h2>Цель: 50 подтягиваний</h2>
+        <p>Разбейте на подходы: 5×10 или 10×5.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Какие мышцы работают?</h2>
+        <ul>
+            <li>Широчайшие мышцы спины</li>
+            <li>Бицепсы</li>
+            <li>Предплечья</li>
+            <li>Трапеции</li>
+        </ul>
+    </div>
+
+    <div class="rating">
+        <h2>Оцените тренировку</h2>
+        <button onclick="rate(1)">Плохо</button>
+        <button onclick="rate(3)">Нормально</button>
+        <button onclick="rate(5)">Отлично!</button>
+        <p id="rating-result"></p>
+    </div>
+</div>
+
+<script>
+    function rate(score) {
+        document.getElementById("rating-result").innerText = "Спасибо за вашу оценку: " + score + " ⭐";
+    }
+</script>
+
+</body>
+</html>
